@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>罷免OOO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #e74c3c;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .map-container {
+            width: 80%;
+            height: 500px;
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+            gap: 20px;
+        }
+        
+        .social-icons a {
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .social-icons a:hover {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <script id="recall">// 建立跑馬燈容器
+        const marquee = document.createElement('div');
+        marquee.style.position = 'fixed';
+        marquee.style.top = '0';
+        marquee.style.left = '0';
+        marquee.style.width = '100%';
+        marquee.style.backgroundColor = '#ffcc00';
+        marquee.style.color = '#000';
+        marquee.style.zIndex = '9999';
+        marquee.style.padding = '10px 0';
+        marquee.style.fontWeight = 'bold';
+        marquee.style.textAlign = 'center';
+        
+        const link = document.createElement('a');
+        link.href = 'https://recall2025.ourtaiwan.tw';
+        link.textContent = '❤️‍🔥立即連署大罷免，線上列印好方便❤️‍🔥';
+        link.style.color = '#000';
+        link.style.textDecoration = 'none';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        
+        link.onmouseover = () => link.style.color = '#c00';
+        link.onmouseout = () => link.style.color = '#000';
+        
+        marquee.appendChild(link);
+        document.body.style.paddingTop = '40px';
+        document.body.insertBefore(marquee, document.body.firstChild);
+        
+        // 建立「複製本程式碼」按鈕
+        const btn = document.createElement('button');
+        btn.textContent = '複製本程式碼';
+        btn.style.position = 'fixed';
+        btn.style.top = '3px';
+        btn.style.right = '10px';
+        btn.style.zIndex = '9999';
+        btn.style.padding = '8px 12px';
+        btn.style.background = '#000';
+        btn.style.color = '#fff';
+        btn.style.border = 'none';
+        btn.style.borderRadius = '5px';
+        btn.style.cursor = 'pointer';
+        document.body.appendChild(btn);
+        
+        // 複製 <script id="recall"> 的內容
+        btn.onclick = async () => {
+          const code = document.getElementById('recall').textContent.trim();
+          const wrapped = '<scr' + 'ipt id="recall">' + code + '</scr' + 'ipt>';
+          try {
+            await navigator.clipboard.writeText(wrapped);
+            btn.textContent = '✅ 已複製';
+            setTimeout(() => btn.textContent = '複製本程式碼', 2000);
+          } catch (e) {
+            alert('複製失敗，請手動複製');
+          }
+        };</script>
+
+    <header>
+        <h1>罷免OOO就是罷免傅xx</h1>
+    </header>
+    
+    <div class="social-icons">
+        <!-- 這裡請換成自訂的社群連結 -->
+        <a onclick="javascript:void(0)"><i class="fa-brands fa-threads"></i>Threads連結</a>
+    </div>
+    
+    <div class="map-container">
+        <h2>罷免地圖(這裡請換成自訂的罷免連署站地圖)</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231263.1017208849!2d121.3648538!3d25.0856123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac6b61dbbd8b%3A0xbcd1baad5c06a482!2z5Y-w5YyX5biC!5e0!3m2!1szh-TW!2stw!4v1718204507838!5m2!1szh-TW!2stw" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <script id="recall_bottom">// 建立跑馬燈容器
+        const marquee_bottom = document.createElement('div');
+        marquee_bottom.style.position = 'fixed';
+        marquee_bottom.style.bottom = '0';
+        marquee_bottom.style.left = '0';
+        marquee_bottom.style.width = '100%';
+        marquee_bottom.style.backgroundColor = '#ffcc00';
+        marquee_bottom.style.color = '#000';
+        marquee_bottom.style.zIndex = '9999';
+        marquee_bottom.style.padding = '10px 0';
+        marquee_bottom.style.fontWeight = 'bold';
+        marquee_bottom.style.textAlign = 'center';
+        
+        const link_bottom = document.createElement('a');
+        link_bottom.href = 'https://recall2025.ourtaiwan.tw';
+        link_bottom.textContent = '❤️‍🔥立即連署大罷免，線上列印好方便❤️‍🔥';
+        link_bottom.style.color = '#000';
+        link_bottom.style.textDecoration = 'none';
+        link_bottom.target = '_blank';
+        link_bottom.rel = 'noopener noreferrer';
+        
+        link_bottom.onmouseover = () => link_bottom.style.color = '#c00';
+        link_bottom.onmouseout = () => link_bottom.style.color = '#000';
+        
+        marquee_bottom.appendChild(link_bottom);
+        document.body.style.paddingTop = '40px';
+        document.body.insertBefore(marquee_bottom, document.body.firstChild);
+        
+        // 如果畫面寬度大於 600px，才顯示「複製本程式碼」按鈕
+        if (window.innerWidth > 600) {
+          const btn_bottom = document.createElement('button');
+          btn_bottom.textContent = '複製本程式碼';
+          btn_bottom.style.position = 'fixed';
+          btn_bottom.style.bottom = '3px';
+          btn_bottom.style.right = '10px';
+          btn_bottom.style.zIndex = '9999';
+          btn_bottom.style.padding = '8px 12px';
+          btn_bottom.style.background = '#000';
+          btn_bottom.style.color = '#fff';
+          btn_bottom.style.border = 'none';
+          btn_bottom.style.borderRadius = '5px';
+          btn_bottom.style.cursor = 'pointer';
+          document.body.appendChild(btn_bottom);
+        
+          btn_bottom.onclick = async () => {
+            const code = document.getElementById('recall_bottom').textContent.trim();
+            const wrapped = '<scr' + 'ipt id="recall_bottom">' + code + '</scr' + 'ipt>';
+            try {
+              await navigator.clipboard.writeText(wrapped);
+              btn.textContent = '✅ 已複製';
+              setTimeout(() => btn.textContent = '複製本程式碼', 2000);
+            } catch (e) {
+              alert('複製失敗，請手動複製');
+            }
+          };
+        }</script>
+</body>
+</html> 
