@@ -22,76 +22,13 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <style>
-        body {
-            font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #e74c3c;
-            color: white;
-            width: 100%;
-            text-align: center;
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-        h1 {
-            margin: 0;
-        }
-
-        .event-container {
-            width: 80%;
-            max-width: 800px;
-            margin: 10px 0;
-        }
-
-        .action-container {
-            width: 80%;
-            max-width: 800px;
-            margin: 10px 0;
-        }
-        .map-container {
-            width: 80%;
-            height: 500px;
-            margin: 10px 0;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .social-icons {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 15px 0;
-            padding: 0 10px;
-            gap: 20px;
-        }
-        
-        .social-icons a {
-            font-size: 18px;
-            color: #333;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        
-        .social-icons a:hover {
-            color: #e74c3c;
-        }
-    </style>
+    
+    <!-- 加載 CSS 檔案 -->
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./print.css">
 </head>
 <body>
-    <script id="recall">// 建立跑馬燈容器
+    <script id="recall" class="print-hide">// 建立跑馬燈容器
         const marquee = document.createElement('div');
         marquee.style.position = 'fixed';
         marquee.style.top = '0';
@@ -152,7 +89,7 @@
         <h1>罷免OOO就是罷免傅xx</h1>
     </header>
     
-    <div class="social-icons">
+    <div class="social-icons print-hide">
         <!-- 這裡請換成自訂的社群連結 -->
         <a href="https://www.threads.net/@banibao1226" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i>Threads連結(請換成自訂的社群連結)</a>
         <a href="https://github.com/bestian/recall-template" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub 儲存庫(目前連結到模版Template)</a>
@@ -173,7 +110,7 @@
     
       <div class="event">
         <h4>2025年1月21日：<a href="https://www.cna.com.tw/news/aipl/202501220233.aspx" target="_blank" rel="noopener noreferrer">刪減數位發展部和國防民生預算</a></h4>
-        <p>立法院三讀通過114年度中央政府總預算案，大幅刪減數位發展部和國防、社會福利等預算，引發各界質疑。</p>
+        <p>立法院針對114年度中央政府總預算案，大幅刪減數位發展部和國防、社會福利等預算，引發各界質疑。</p>
       </div>
     </div>
 
@@ -181,11 +118,13 @@
     <div class="action-container">
       <h2>立即行動</h2>
       <p>1. 現場連署：到各罷免連署站連署罷免
-      <p>2. 自行列印：到<a href="https://recall2025.ourtaiwan.tw" target="_blank" rel="noopener noreferrer">https://recall2025.ourtaiwan.tw</a>生成罷免連署書，列印下來，簽名後，到各罷免連署站送件。</p>
-      <p>3. 罷免投票：記得要投罷免票</p>
+      <p>2. 或自行列印：到<a href="https://recall2025.ourtaiwan.tw" target="_blank" rel="noopener noreferrer">https://recall2025.ourtaiwan.tw</a>生成連署書，列印簽名，到罷免連署站送件。<br/>
+         <img class="print-only" src="./qrcode.png" alt="罷免連署書QR Code" style="width: 164px; height: 164px; margin: 1em auto;">
+      <p>3. 宣傳罷免：<button class="print-hide print-button" onclick="window.scrollTo(0, 0); setTimeout(() => window.print(), 500)"><i class="fa-solid fa-print"></i> 列印宣傳單</button></p>
+      <p>4. 罷免投票：記得要投罷免票</p>
     </div>
     
-    <div class="map-container">
+    <div class="map-container print-hide">
         <h2>罷免地圖(請換成自訂的罷免連署站地圖)</h2>
         <h4>註：全台灣的民進黨議員和立委服務處也可收罷免連署書</h4>
         <iframe 
@@ -202,7 +141,7 @@
         
     </div>
 
-    <script id="recall_bottom">// 建立跑馬燈容器
+    <script id="recall_bottom" class="print-hide">// 建立跑馬燈容器
         const marquee_bottom = document.createElement('div');
         marquee_bottom.style.position = 'fixed';
         marquee_bottom.style.bottom = '0';

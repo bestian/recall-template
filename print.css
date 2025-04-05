@@ -1,0 +1,63 @@
+@media print {
+
+    .print-only {
+        display: block !important;
+        visibility: visible !important;
+    }
+
+    /* 列印時隱藏具有 print-hide 類別的元素 */
+    .print-hide{
+        display: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* 一般列印樣式優化 */
+    body {
+        background: white;
+        font-size: 12pt;
+        color: black;
+        margin: 0;
+        padding: 0 !important;
+        padding-top: 50px !important;
+        visibility: visible !important;
+    }
+    
+    
+    /* 連結樣式 */
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    /* 容器寬度最大化 */
+    .event-container, 
+    .action-container {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* 標題不斷頁 */
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 0px !important;
+        margin-top: 0px !important;
+    }
+    
+    /* 改善文字可讀性 */
+    p, h1, h2, h3, h4, h5, h6 {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    /* 移除所有陰影效果 */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* 不顯示內部連結目標 */
+    a[href^="#"]:after {
+        content: "";
+    }
+} 
