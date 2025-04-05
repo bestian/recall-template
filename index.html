@@ -41,8 +41,10 @@
         }
         .social-icons {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             margin: 15px 0;
+            padding: 0 10px;
             gap: 20px;
         }
         
@@ -50,6 +52,7 @@
             font-size: 24px;
             color: #333;
             cursor: pointer;
+            text-decoration: none;
         }
         
         .social-icons a:hover {
@@ -86,33 +89,34 @@
         document.body.style.paddingTop = '40px';
         document.body.insertBefore(marquee, document.body.firstChild);
         
-        // 建立「複製本程式碼」按鈕
-        const btn = document.createElement('button');
-        btn.textContent = '複製本程式碼';
-        btn.style.position = 'fixed';
-        btn.style.top = '3px';
-        btn.style.right = '10px';
-        btn.style.zIndex = '9999';
-        btn.style.padding = '8px 12px';
-        btn.style.background = '#000';
-        btn.style.color = '#fff';
-        btn.style.border = 'none';
-        btn.style.borderRadius = '5px';
-        btn.style.cursor = 'pointer';
-        document.body.appendChild(btn);
+        // 如果畫面寬度大於 600px，才顯示「複製本程式碼」按鈕
+        if (window.innerWidth > 600) {
+          const btn = document.createElement('button');
+          btn.textContent = '複製本程式碼';
+          btn.style.position = 'fixed';
+          btn.style.top = '3px';
+          btn.style.right = '10px';
+          btn.style.zIndex = '9999';
+          btn.style.padding = '8px 12px';
+          btn.style.background = '#000';
+          btn.style.color = '#fff';
+          btn.style.border = 'none';
+          btn.style.borderRadius = '5px';
+          btn.style.cursor = 'pointer';
+          document.body.appendChild(btn);
         
-        // 複製 <script id="recall"> 的內容
-        btn.onclick = async () => {
-          const code = document.getElementById('recall').textContent.trim();
-          const wrapped = '<scr' + 'ipt id="recall">' + code + '</scr' + 'ipt>';
-          try {
-            await navigator.clipboard.writeText(wrapped);
-            btn.textContent = '✅ 已複製';
-            setTimeout(() => btn.textContent = '複製本程式碼', 2000);
-          } catch (e) {
-            alert('複製失敗，請手動複製');
-          }
-        };</script>
+          btn.onclick = async () => {
+            const code = document.getElementById('recall').textContent.trim();
+            const wrapped = '<scr' + 'ipt id="recall">' + code + '</scr' + 'ipt>';
+            try {
+              await navigator.clipboard.writeText(wrapped);
+              btn.textContent = '✅ 已複製';
+              setTimeout(() => btn.textContent = '複製本程式碼', 2000);
+            } catch (e) {
+              alert('複製失敗，請手動複製');
+            }
+          };
+        }</script>
 
     <header>
         <h1>罷免OOO就是罷免傅xx</h1>
@@ -120,11 +124,12 @@
     
     <div class="social-icons">
         <!-- 這裡請換成自訂的社群連結 -->
-        <a onclick="javascript:void(0)"><i class="fa-brands fa-threads"></i>Threads連結</a>
+        <a onclick="javascript:void(0)"><i class="fa-brands fa-threads"></i>Threads連結(請換成自訂的社群連結)</a>
+        <a href="https://github.com/bestian/recall-template" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub 儲存庫(目前連結到模版Template)</a>
     </div>
     
     <div class="map-container">
-        <h2>罷免地圖(這裡請換成自訂的罷免連署站地圖)</h2>
+        <h2>罷免地圖(請換成自訂的罷免連署站地圖)</h2>
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231263.1017208849!2d121.3648538!3d25.0856123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac6b61dbbd8b%3A0xbcd1baad5c06a482!2z5Y-w5YyX5biC!5e0!3m2!1szh-TW!2stw!4v1718204507838!5m2!1szh-TW!2stw" 
             allowfullscreen="" 
