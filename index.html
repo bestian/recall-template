@@ -116,7 +116,7 @@
 
 
     <div class="action-container">
-      <h2>立即行動</h2>
+      <h2>立即行動<span class="print-hide">(❤️‍🔥倒數 <span id="countdown"></span> 天)</span></h2>
       <p>1. 現場連署：到各罷免連署站連署罷免
       <p>2. 或自行列印：到<a href="https://recall2025.ourtaiwan.tw" target="_blank" rel="noopener noreferrer">https://recall2025.ourtaiwan.tw</a>生成連署書，列印簽名，到罷免連署站送件。<br/>
          <img class="print-only" src="./qrcode.png" alt="罷免連署書QR Code" style="width: 164px; height: 164px; margin: 1em auto;">
@@ -140,6 +140,34 @@
         <br/>
         
     </div>
+
+    <script>
+        // 計算倒數天數
+        document.addEventListener('DOMContentLoaded', function() {
+            // 設定目標日期 (現在日期加上15天)
+            const today = new Date();
+            const targetDate = new Date();
+            targetDate.setDate(today.getDate() + 15);
+            
+            // 獲取倒數元素
+            const countdownElement = document.getElementById('countdown');
+            
+            // 更新倒數天數
+            function updateCountdown() {
+                const currentDate = new Date();
+                const timeDifference = targetDate - currentDate;
+                const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+                
+                countdownElement.textContent = daysRemaining;
+            }
+            
+            // 初始更新
+            updateCountdown();
+            
+            // 每24小時更新一次
+            setInterval(updateCountdown, 24 * 60 * 60 * 1000);
+        });
+    </script>
 
     <script id="recall_bottom" class="print-hide">// 建立跑馬燈容器
         const marquee_bottom = document.createElement('div');
