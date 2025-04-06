@@ -105,12 +105,6 @@
 
 ---
 
-## 🙌 由誰製作
-
-本模版由 [小巴老師 (Bestian Tang)](https://github.com/bestian) 製作，歡迎自由改作或回報問題。
-
----
-
 需要進一步協助？可以在 GitHub 提 [issue](https://github.com/bestian/recall-template/issues)。
 
 ---
