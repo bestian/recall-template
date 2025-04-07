@@ -1,9 +1,11 @@
-legislator: "謝衣鳳"
-group_name: "罷免缺衣不可 - 謝衣鳯罷免團隊"
+legislator: "謝衣鳳" # 請修改立法委員姓名
+group_name: "罷免缺衣不可 - 謝衣鳯罷免團隊" # 請修改罷免團隊名稱
 social:
-  instagram: https://www.instagram.com/bamain_c1feng
-  threads: https://www.threads.net/@bamain_c1feng
-  facebook: https://www.facebook.com/groups/829936155897331/
+  instagram: https://www.instagram.com/bamain_c1feng # 請修改社群連結
+  threads: https://www.threads.net/@bamain_c1feng # 請修改社群連結
+  facebook: https://www.facebook.com/groups/829936155897331/ # 請修改社群連結
 links:
-  - url: https://forms.gle/poDwfnG1FQKfgWBY6
+  - url: https://forms.gle/poDwfnG1FQKfgWBY6 # 請修改報名表連結
     label: 志工報名表
+
+
