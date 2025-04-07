@@ -1,9 +1,12 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>罷免OOO</title>
+    <title>{{ site.group_name }} | 罷免{{ site.legislator }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
@@ -86,12 +89,20 @@
         }</script>
 
     <header>
-        <h1>罷免OOO就是罷免傅xx</h1>
+        <h1>罷免{{ site.legislator }}就是罷免傅xx</h1>
     </header>
     
     <div class="social-icons print-hide">
         <!-- 這裡請換成自訂的社群連結 -->
-        <a href="https://www.threads.net/@banibao1226" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i>Threads連結(請換成自訂的社群連結)</a>
+        {% if site.social.threads %}
+          <a href="{{ site.social.threads }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i> Threads</a>
+        {% endif %}
+        {% if site.social.instagram %}
+          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        {% endif %}
+        {% if site.social.instagram %}
+          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        {% endif %}
         <a href="https://github.com/bestian/recall-template" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub 儲存庫(目前連結到模版Template)</a>
     </div>
 
