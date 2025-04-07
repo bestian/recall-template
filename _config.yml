@@ -5,5 +5,5 @@ social:
   threads: https://www.threads.net/@bamain_c1feng
   facebook: https://www.facebook.com/groups/829936155897331/
 links:
-  - 網址: https://forms.gle/poDwfnG1FQKfgWBY6
-    連結名稱: 志工報名表
+  - url: https://forms.gle/poDwfnG1FQKfgWBY6
+    label: 志工報名表
