@@ -21,20 +21,24 @@
 
 ```yaml
 # 罷免資訊
-group_name: "第X選區罷免行動聯盟"  # 罷免團體名稱
-legislator: "OOO"                 # 被罷免立委姓名
+group_name: "罷免缺衣不可 - 謝衣鳯罷免團隊"  # 罷免團體名稱
+legislator: "謝衣鳳"                 # 被罷免立委姓名
 district: "台北市第X選區"          # 選區名稱
-kmt_puppet: "傅xx"                # 傀儡人物名稱（若不適用可留空）
+boss: "傅崐萁"                # 背後人物名稱
 
 # 社群媒體連結（不需要的可刪除或留空）
 social:
-  facebook: "https://facebook.com/your-page"
-  instagram: "https://instagram.com/your-account"
-  threads: "https://threads.net/@your-account"
-  line: "https://line.me/your-account"
+  instagram: https://www.instagram.com/bamain_c1feng
+  threads: https://www.threads.net/@bamain_c1feng
+  facebook: https://www.facebook.com/groups/829936155897331/
 
 # 地圖嵌入連結（從 Google Maps 獲取）
 map_src: "https://www.google.com/maps/d/embed?mid=YOUR_MAP_ID"
+
+# 自訂連結
+links:
+  - url: https://forms.gle/poDwfnG1FQKfgWBY6
+    label: 志工報名表
 ```
 
 完成設定後，網站會自動更新，無需額外操作！

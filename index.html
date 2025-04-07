@@ -89,7 +89,7 @@
         }</script>
 
     <header>
-        <h1>罷免{{ site.legislator }}就是罷免傅xx</h1>
+        <h1>罷免{{ site.legislator }}就是罷免{{ site.boss }}</h1>
     </header>
     
     <div class="social-icons print-hide">
@@ -139,7 +139,7 @@
         <h2>罷免地圖(請換成自訂的罷免連署站地圖)</h2>
         <h4>註：全台灣的民進黨議員和立委服務處也可收罷免連署書</h4>
         <iframe 
-            src="https://www.google.com/maps/d/embed?mid=1Fcm_PdIXfjr3ufCYMA31B7xDAlFDVHw" 
+            src="{{ site.map_src }}" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
@@ -155,10 +155,10 @@
     <script>
         // 計算倒數天數
         document.addEventListener('DOMContentLoaded', function() {
-            // 設定目標日期 (現在日期加上15天)
-            const today = new Date();
+            // 設定目標日期 (2025-04-06加上15天)
+            const startDate = new Date('2025-04-06');
             const targetDate = new Date();
-            targetDate.setDate(today.getDate() + 15);
+            targetDate.setDate(startDate.getDate() + 15);
             
             // 獲取倒數元素
             const countdownElement = document.getElementById('countdown');

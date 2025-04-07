@@ -1,3 +1,7 @@
+#_site
+_site/
+.jekyll-cache/
+
 # Logs
 logs
 *.log
