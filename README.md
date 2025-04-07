@@ -43,38 +43,7 @@ links:
 
 完成設定後，網站會自動更新，無需額外操作！
 
-## 📱 自訂網站
-
-若要進一步自訂網站內容，可以編輯以下檔案：
-
-### 1. `_data/events.yml` - 罷免事件時間軸
-
-```yaml
-- date: "2024年12月20日"
-  title: "強行修改《公職人員選舉罷免法》"
-  url: "https://www.readr.tw/post/3005"
-  description: "立法院在缺乏充分討論的情況下，三讀通過法案，引發社會強烈反彈。"
-
-- date: "2025年1月2日" 
-  title: "另一個事件"
-  url: "https://news-url.com"
-  description: "事件描述..."
-```
-
-### 2. `_data/actions.yml` - 行動方案
-
-```yaml
-- title: "現場連署"
-  description: "到各罷免連署站連署罷免"
-  icon: "map-marker"  # Font Awesome 圖示
-
-- title: "自行列印"
-  description: "到 recall2025.ourtaiwan.tw 生成連署書，列印簽名後，到罷免連署站送件"
-  icon: "print"
-  button: true  # 是否顯示列印按鈕
-```
-
-### 3. 更換 QR Code
+### 2. 更換 QR Code
 
 將你的罷免連署 QR Code 圖片命名為 `qrcode.png` 並上傳到儲存庫，取代原有檔案。
 
