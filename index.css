@@ -51,11 +51,18 @@ iframe {
 }
 .social-icons {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 手機版預設垂直排列 */
     justify-content: center;
     margin: 15px 0;
     padding: 0 10px;
     gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .social-icons {
+        flex-direction: row; /* 寬螢幕上水平排列 */
+        gap: 30px; /* 水平排列時增加間距 */
+    }
 }
 
 .social-icons a {

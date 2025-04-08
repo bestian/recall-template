@@ -9,7 +9,7 @@
     <meta name="description" content="罷免{{ site.data.site_data.legislator }}就是罷免{{ site.data.site_data.boss }}">
     <title>{{ site.data.site_data.group_name }} | 罷免{{ site.data.site_data.legislator }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
     <link rel="apple-touch-icon" sizes="57x57" href="./img/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./img/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./img/apple-icon-72x72.png">
@@ -34,85 +34,135 @@
 </head>
 <body>
 
-    <header>
-        <h1>罷免{{ site.data.site_data.legislator }}就是罷免{{ site.data.site_data.boss }}</h1>
+    <header class="ui inverted segment">
+        <div class="ui container">
+            <h1>罷免{{ site.data.site_data.legislator }}就是罷免{{ site.data.site_data.boss }}</h1>
+        </div>
     </header>
     
-    <div class="social-icons print-hide">
-        <!-- 這裡請換成自訂的社群連結 -->
-        {% if site.data.site_data.social.threads %}
-          <a href="{{ site.data.site_data.social.threads }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i> Threads</a>
-        {% endif %}
-        {% if site.data.site_data.social.instagram %}
-          <a href="{{ site.data.site_data.social.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-        {% endif %}
-        {% if site.data.site_data.social.facebook %}
-          <a href="{{ site.data.site_data.social.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
-        {% endif %}
-        {% if site.data.site_data.social.github %}
-          <a href="{{ site.data.site_data.social.github }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub 儲存庫(目前連結到模版Template)</a>
-        {% endif %}
-    </div>
-
-    <div class="event-container">
-        <h2>藍白惡搞立院大事紀</h2>
-        
-      <div class="event">
-          <h3>2024年12月20日：<a href="https://www.readr.tw/post/3005" target="_blank" rel="noopener noreferrer">強行修改《公職人員選舉罷免法》、《憲法訴訟法》與《財政收支劃分法》</a></h3>
-          <p>立法院在缺乏充分討論的情況下，三讀通過上述三項法案，引發社會強烈反彈。</p>
-      </div>
-      
-      <div class="event">
-          <h3>2025年1月2日：<a href="https://www.cna.com.tw/news/aipl/202501020334.aspx" target="_blank" rel="noopener noreferrer">藍白擬癱瘓憲法法庭，助財劃法、選罷法闖關</a></h3>
-          <p>藍白兩黨計劃透過癱瘓憲法法庭，推動財政收支劃分法等法案，可能導致憲政危機。</p>
-      </div>
-    
-      <div class="event">
-        <h3>2025年1月21日：<a href="https://www.cna.com.tw/news/aipl/202501220233.aspx" target="_blank" rel="noopener noreferrer">刪減數位發展部和國防民生預算</a></h3>
-        <p>立法院針對114年度中央政府總預算案，大幅刪減數位發展部和國防、社會福利等預算，引發各界質疑。</p>
-      </div>
-    </div>
-
-
-    <div class="action-container">
-      <h2>立即行動<span class="print-hide">(❤️‍🔥倒數 <span id="countdown"></span> 天)</span></h2>
-      <p>1. 現場連署：到各罷免連署站連署罷免
-      <p>2. 宣傳罷免：<button class="print-hide print-button" onclick="window.scrollTo(0, 0); setTimeout(() => window.print(), 500)"><i class="fa-solid fa-print"></i> 列印宣傳單</button></p>
-      <p>3. 罷免投票：記得要投罷免票</p>
-    </div>
-
-
-    <!-- ... 自定義連結區域 ... -->
-    {% if site.data.site_data.links %}
-    <div class="links-container">
-        <h2>相關連結</h2>
-        <div class="links">
-            {% for link in site.data.site_data.links %}
-            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="custom-link">{{ link.label }}</a>
-            {% endfor %}
+    <div class="ui container">
+        <div class="social-icons print-hide ui basic segment">
+            <!-- 這裡請換成自訂的社群連結 -->
+            {% if site.data.site_data.social.threads %}
+              <a href="{{ site.data.site_data.social.threads }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i> Threads</a>
+            {% endif %}
+            {% if site.data.site_data.social.instagram %}
+              <a href="{{ site.data.site_data.social.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            {% endif %}
+            {% if site.data.site_data.social.facebook %}
+              <a href="{{ site.data.site_data.social.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            {% endif %}
+            {% if site.data.site_data.social.github %}
+              <a href="{{ site.data.site_data.social.github }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+            {% endif %}
         </div>
-    </div>
-    {% endif %}
-    
-    <div class="map-container print-hide">
-        <h2>罷免地圖(請換成自訂的罷免連署站地圖)</h2>
-        <h3>註：全台灣的民進黨議員和立委服務處也可收罷免連署書</h3>
-        <iframe 
-            title="myMap"
-            src="{{ site.data.site_data.map_src }}" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
 
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        
+        <div class="ui stackable grid">
+            <div class="row">
+                <div class="sixteen wide column">
+                    <div class="ui raised segment">
+                        <h2 class="ui header">藍白惡搞立院大事紀</h2>
+                        
+                        <div class="ui divided items">
+                            <div class="item">
+                                <div class="content">
+                                    <h3 class="header">2024年12月20日：<a href="https://www.readr.tw/post/3005" target="_blank" rel="noopener noreferrer">強行修改《公職人員選舉罷免法》、《憲法訴訟法》與《財政收支劃分法》</a></h3>
+                                    <div class="description">
+                                        <p>立法院在缺乏充分討論的情況下，三讀通過上述三項法案，引發社會強烈反彈。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                <div class="content">
+                                    <h3 class="header">2025年1月2日：<a href="https://www.cna.com.tw/news/aipl/202501020334.aspx" target="_blank" rel="noopener noreferrer">藍白擬癱瘓憲法法庭，助財劃法、選罷法闖關</a></h3>
+                                    <div class="description">
+                                        <p>藍白兩黨計劃透過癱瘓憲法法庭，推動財政收支劃分法等法案，可能導致憲政危機。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="item">
+                                <div class="content">
+                                    <h3 class="header">2025年1月21日：<a href="https://www.cna.com.tw/news/aipl/202501220233.aspx" target="_blank" rel="noopener noreferrer">刪減數位發展部和國防民生預算</a></h3>
+                                    <div class="description">
+                                        <p>立法院針對114年度中央政府總預算案，大幅刪減數位發展部和國防、社會福利等預算，引發各界質疑。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="sixteen wide column">
+                    <div class="ui red segment">
+                        <h2 class="ui header">立即行動<span class="print-hide">(❤️‍🔥倒數 <span id="countdown"></span> 天)</span></h2>
+                        <div class="ui list">
+                            <div class="item">
+                                <i class="right triangle icon"></i>
+                                <div class="content">
+                                    <p>1. 現場連署：到各罷免連署站連署罷免</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="right triangle icon"></i>
+                                <div class="content">
+                                    <p>2. 宣傳罷免：
+                                        <button class="ui red button print-hide print-button" onclick="window.scrollTo(0, 0); setTimeout(() => window.print(), 500)">
+                                            <i class="print icon"></i> 列印宣傳單
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="right triangle icon"></i>
+                                <div class="content">
+                                    <p>3. 罷免投票：記得要投罷免票</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% if site.data.site_data.links %}
+            <div class="row print-hide">
+                <div class="sixteen wide column">
+                    <div class="ui segment">
+                        <h2 class="ui header">相關連結</h2>
+                        <div class="ui fluid buttons">
+                            {% for link in site.data.site_data.links %}
+                            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="ui teal button">{{ link.label }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            
+            <div class="row print-hide">
+                <div class="sixteen wide column">
+                    <div class="ui segment">
+                        <h2 class="ui header">罷免地圖(請換成自訂的罷免連署站地圖)</h2>
+                        <h3 class="ui sub header">註：全台灣的民進黨議員和立委服務處也可收罷免連署書</h3>
+                        <iframe 
+                            title="myMap"
+                            src="{{ site.data.site_data.map_src }}" 
+                            style="width: 100%; height: 400px;"
+                            allowfullscreen="true" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
+        
         // 計算倒數天數
         document.addEventListener('DOMContentLoaded', function() {
             // 設定目標日期 (2025-04-06加上15天)
