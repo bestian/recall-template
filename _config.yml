@@ -1,23 +1,14 @@
-# 罷免資訊
-group_name: "罷免缺衣不可 - 謝衣鳯罷免團隊"  # 罷免團體名稱
-legislator: "謝衣鳳" # 罷免目標立法委員姓名
-district: "台北市第X選區"          # 選區名稱
-boss: "傅崐萁"                # 背後人物名稱
+# 基本 Jekyll 設定
+title: 罷免網站模板
+description: 專為台灣 2025 年罷免活動設計的網站模板
 
-# 社群媒體連結（不需要的可刪除或留空）
-social:
-  instagram: https://www.instagram.com/bamain_c1feng # 請修改社群連結
-  threads: https://www.threads.net/@bamain_c1feng # 請修改社群連結
-  facebook: https://www.facebook.com/groups/829936155897331/ # 請修改社群連結
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
 
-# 地圖嵌入連結（從 Google Maps 獲取）
-map_src: "https://www.google.com/maps/d/embed?mid=1Fcm_PdIXfjr3ufCYMA31B7xDAlFDVHw" # 請修改地圖連結
-
-
-# 自訂連結
-
-links:
-  - url: https://forms.gle/poDwfnG1FQKfgWBY6 # 請修改報名表連結
-    label: 志工報名表
 
 

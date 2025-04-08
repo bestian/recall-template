@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="罷免{{ site.legislator }}就是罷免{{ site.boss }}">
-    <title>{{ site.group_name }} | 罷免{{ site.legislator }}</title>
+    <meta name="description" content="罷免{{ site.data.site_data.legislator }}就是罷免{{ site.data.site_data.boss }}">
+    <title>{{ site.data.site_data.group_name }} | 罷免{{ site.data.site_data.legislator }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
@@ -90,19 +90,19 @@
         }</script>
 
     <header>
-        <h1>罷免{{ site.legislator }}就是罷免{{ site.boss }}</h1>
+        <h1>罷免{{ site.data.site_data.legislator }}就是罷免{{ site.data.site_data.boss }}</h1>
     </header>
     
     <div class="social-icons print-hide">
         <!-- 這裡請換成自訂的社群連結 -->
-        {% if site.social.threads %}
-          <a href="{{ site.social.threads }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i> Threads</a>
+        {% if site.data.site_data.social.threads %}
+          <a href="{{ site.data.site_data.social.threads }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i> Threads</a>
         {% endif %}
-        {% if site.social.instagram %}
-          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        {% if site.data.site_data.social.instagram %}
+          <a href="{{ site.data.site_data.social.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
         {% endif %}
-        {% if site.social.instagram %}
-          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        {% if site.data.site_data.social.facebook %}
+          <a href="{{ site.data.site_data.social.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
         {% endif %}
         <a href="https://github.com/bestian/recall-template" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub 儲存庫(目前連結到模版Template)</a>
     </div>
@@ -141,7 +141,7 @@
         <h3>註：全台灣的民進黨議員和立委服務處也可收罷免連署書</h3>
         <iframe 
             title="myMap"
-            src="{{ site.map_src }}" 
+            src="{{ site.data.site_data.map_src }}" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
@@ -238,5 +238,17 @@
             }
           };
         }</script>
+
+    <!-- ... 自定義連結區域 ... -->
+    {% if site.data.site_data.links %}
+    <div class="links-container">
+        <h2>相關連結</h2>
+        <div class="links">
+            {% for link in site.data.site_data.links %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="custom-link">{{ link.label }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 </body>
 </html> 

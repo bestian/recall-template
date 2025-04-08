@@ -15,8 +15,8 @@
    - 在新儲存庫的 Settings → Pages 中，將 Source 設為 `gh-pages` 分支
    - 約 1-3 分鐘後，GitHub 會提供一個網址，格式為 `https://你的用戶名.github.io/recall-xxx`
 
-3. **編輯 `_config.yml`**
-   - 在儲存庫中找到 `_config.yml` 檔案並編輯
+3. **編輯 `_data/site_data.yml`**
+   - 在儲存庫中找到 `_data/site_data.yml` 檔案並編輯
    - 修改以下關鍵設定：
 
 ```yaml
@@ -41,7 +41,7 @@ links:
     label: 志工報名表
 ```
 
-完成設定後，網站會自動更新，無需額外操作！
+完成設定後，網站會**自動更新**，不需要重新啟動Jekyll！
 
 ### 2. 更換 QR Code
 
@@ -72,18 +72,20 @@ links:
 
 2. 安裝 Jekyll 環境（需要 Ruby）
    ```
-   gem install bundler jekyll
-   bundle install
+   gem install jekyll
    ```
 
-3. 本地運行測試
+3. 本地運行測試（支持自動重載）
    ```
-   bundle exec jekyll serve
+   jekyll serve
    ```
 
-4. 編輯網站模板（`_layouts/default.html`）和樣式表（`index.css`、`print.css`）
+4. 編輯 `_data/site_data.yml` 來更新網站配置
+   - 變更會立即生效，不需要重啟 Jekyll
 
-5. 提交並推送變更
+5. 編輯網站模板（`_layouts/default.html`）和樣式表（`index.css`、`print.css`）
+
+6. 提交並推送變更
    ```
    git add .
    git commit -m "自訂網站"
