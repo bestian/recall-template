@@ -1,24 +1,26 @@
 # 罷免資訊
-group_name: "罷免缺衣不可 - 謝衣鳯罷免團隊"  # 罷免團體名稱
-legislator: "謝衣鳳"                 # 被罷免立委姓名
-district: "台北市第X選區"          # 選區名稱
+group_name: "文山退葆-台北市文山南中正罷免團隊"  # 罷免團體名稱
+legislator: "賴士葆"                 # 被罷免立委姓名
+district: "台北市第八選區(文山、南中正)"          # 選區名稱
 boss: "傅崐萁"                # 背後人物名稱
 
 # 社群媒體連結（不需要的可刪除或留空）
 social:
-  instagram: https://www.instagram.com/bamain_c1feng
-  threads: https://www.threads.net/@bamain_c1feng
-  facebook: https://www.facebook.com/groups/829936155897331/
+  site: https://sites.google.com/view/banibao/
+  instagram: https://www.instagram.com/banibao1226/
+  threads: https://www.threads.net/@banibao1226
+  facebook: https://www.facebook.com/p/%E6%96%87%E5%B1%B1%E9%80%80%E8%91%86-%E5%8F%B0%E5%8C%97%E5%B8%82%E6%96%87%E5%B1%B1%E5%8D%97%E4%B8%AD%E6%AD%A3%E7%BD%B7%E5%85%8D%E5%9C%98%E9%9A%8A-61571266298678/
   github: https://github.com/bestian/recall-template
 
 # 地圖嵌入連結（從 Google Maps 獲取）
 map_src: "https://www.google.com/maps/d/embed?mid=1Fcm_PdIXfjr3ufCYMA31B7xDAlFDVHw"
+place_src: "https://sites.google.com/view/banibao/%E9%80%A3%E7%BD%B2%E7%AB%99%E8%B3%87%E8%A8%8A"
 
 # 自訂連結
 links:
   - url: https://watchout.tw/projects/2025-big-recall
     label: 沃草：為什麼要罷免
   - url: https://bafu.tw/
-    label: 罷免傅隨組識
+    label: 罷傅：連署單與站點
   - url: https://forms.gle/poDwfnG1FQKfgWBY6
     label: 志工報名表 

@@ -37,12 +37,15 @@
     <header class="ui inverted segment">
         <div class="ui container">
             <h1>罷免{{ site.data.site_data.legislator }}就是罷免{{ site.data.site_data.boss }}</h1>
+            <h2>{{ site.data.site_data.district }}</h2>
         </div>
     </header>
     
     <div class="ui container">
         <div class="social-icons print-hide ui basic segment">
-            <!-- 這裡請換成自訂的社群連結 -->
+            {% if site.data.site_data.social.site %}
+              <a href="{{ site.data.site_data.social.site }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i> 網站</a>
+            {% endif %}
             {% if site.data.site_data.social.threads %}
               <a href="{{ site.data.site_data.social.threads }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-threads"></i> Threads</a>
             {% endif %}
@@ -127,6 +130,32 @@
                 </div>
             </div>
 
+            
+            <div class="row print-hide">
+                <div class="sixteen wide column">
+                    <div class="ui segment">
+                        {% if site.data.site_data.place_src %}
+                        <h2>
+                            <a href="{{ site.data.site_data.place_src }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot"></i> 罷免站點一覽</a>
+                        </h2>
+                        {% endif %}
+
+                        {% if site.data.site_data.map_src %}
+                            <h2 class="ui header">罷免地圖</h2>
+                            <h3 class="ui sub header">註：全台灣的民進黨議員和立委服務處也可收罷免連署書</h3>
+                            <iframe 
+                                title="myMap"
+                                src="{{ site.data.site_data.map_src }}" 
+                                style="width: 100%; height: 400px;"
+                                allowfullscreen="true" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
             {% if site.data.site_data.links %}
             <div class="row print-hide">
                 <div class="sixteen wide column">
@@ -141,23 +170,7 @@
                 </div>
             </div>
             {% endif %}
-            
-            <div class="row print-hide">
-                <div class="sixteen wide column">
-                    <div class="ui segment">
-                        <h2 class="ui header">罷免地圖(請換成自訂的罷免連署站地圖)</h2>
-                        <h3 class="ui sub header">註：全台灣的民進黨議員和立委服務處也可收罷免連署書</h3>
-                        <iframe 
-                            title="myMap"
-                            src="{{ site.data.site_data.map_src }}" 
-                            style="width: 100%; height: 400px;"
-                            allowfullscreen="true" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 
