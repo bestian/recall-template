@@ -32,7 +32,7 @@ h1 {
     margin: 10px 0;
 }
 
-.action-container {
+.action-container, .links-container {
     width: 80%;
     max-width: 800px;
     margin: 10px 0;

@@ -9,22 +9,23 @@
     <meta name="description" content="罷免{{ site.data.site_data.legislator }}就是罷免{{ site.data.site_data.boss }}">
     <title>{{ site.data.site_data.group_name }} | 罷免{{ site.data.site_data.legislator }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="./img/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="./img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     
     <!-- 加載 CSS 檔案 -->
@@ -48,7 +49,9 @@
         {% if site.data.site_data.social.facebook %}
           <a href="{{ site.data.site_data.social.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
         {% endif %}
-        <a href="https://github.com/bestian/recall-template" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub 儲存庫(目前連結到模版Template)</a>
+        {% if site.data.site_data.social.github %}
+          <a href="{{ site.data.site_data.social.github }}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub 儲存庫(目前連結到模版Template)</a>
+        {% endif %}
     </div>
 
     <div class="event-container">
@@ -77,6 +80,19 @@
       <p>2. 宣傳罷免：<button class="print-hide print-button" onclick="window.scrollTo(0, 0); setTimeout(() => window.print(), 500)"><i class="fa-solid fa-print"></i> 列印宣傳單</button></p>
       <p>3. 罷免投票：記得要投罷免票</p>
     </div>
+
+
+    <!-- ... 自定義連結區域 ... -->
+    {% if site.data.site_data.links %}
+    <div class="links-container">
+        <h2>相關連結</h2>
+        <div class="links">
+            {% for link in site.data.site_data.links %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="custom-link">{{ link.label }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
     
     <div class="map-container print-hide">
         <h2>罷免地圖(請換成自訂的罷免連署站地圖)</h2>
@@ -124,16 +140,5 @@
         });
     </script>
 
-    <!-- ... 自定義連結區域 ... -->
-    {% if site.data.site_data.links %}
-    <div class="links-container">
-        <h2>相關連結</h2>
-        <div class="links">
-            {% for link in site.data.site_data.links %}
-            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="custom-link">{{ link.label }}</a>
-            {% endfor %}
-        </div>
-    </div>
-    {% endif %}
 </body>
 </html> 
