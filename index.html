@@ -161,7 +161,7 @@
                 <div class="sixteen wide column">
                     <div class="ui segment">
                         <h2 class="ui header">相關連結</h2>
-                        <div class="ui fluid buttons">
+                        <div class="ui fluid buttons flex-rwd-column">
                             {% for link in site.data.site_data.links %}
                             <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="ui teal button">{{ link.label }}</a>
                             {% endfor %}

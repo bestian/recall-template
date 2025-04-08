@@ -65,6 +65,28 @@ iframe {
     }
 }
 
+@media (max-width: 767px) {
+    
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .flex-rwd-column {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .flex-rwd-column .button:first-child {
+        border-radius: 0 !important;
+    }
+    .flex-rwd-column .button:last-child {
+        border-radius: 0 !important;
+    }
+}
+
 .social-icons a {
     font-size: 18px;
     color: #333;
