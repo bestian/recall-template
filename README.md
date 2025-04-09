@@ -1,6 +1,7 @@
 # 罷免網站模板 (Recall Campaign Website Template)
 
-這是一個專為台灣 2025 年罷免活動設計的網站模板，使用 Jekyll 搭配 GitHub Pages 快速建置。只需幾個簡單步驟，即可創建一個專屬於特定罷免案的宣傳網站。
+這是一個專為台灣 2025 年罷免活動設計的網站模板，使用 Jekyll 搭配 GitHub Pages 快速建置。
+只需置換資料，不必寫程式，簡單步驟即可創建一個專屬於特定罷免案的宣傳網站。
 
 參考[如何在本機端開發Jekyll專案](https://chatgpt.com/share/67f45de4-88fc-800b-8f64-0dea63b84771)
 
