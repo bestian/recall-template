@@ -19,7 +19,8 @@ social:
 map_src: "https://www.google.com/maps/d/embed?mid=1Fcm_PdIXfjr3ufCYMA31B7xDAlFDVHw"
 place_src: "https://sites.google.com/view/banibao/%E9%80%A3%E7%BD%B2%E7%AB%99%E8%B3%87%E8%A8%8A"
 
-# 自訂連結
+# 自訂連結(可以自訂2~4個)
+# 格式：- url: 連結網址, label: 連結名稱
 links:
   - url: https://watchout.tw/projects/2025-big-recall
     label: 沃草：為什麼要罷免
