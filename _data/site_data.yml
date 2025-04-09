@@ -1,3 +1,6 @@
+# 部署網址
+site_url: https://bestian.github.io/recall-template/index.html # 改為您的部署網址
+
 # 罷免資訊
 group_name: "文山退葆-台北市文山南中正罷免團隊"  # 罷免團體名稱
 legislator: "賴士葆"                 # 被罷免立委姓名
